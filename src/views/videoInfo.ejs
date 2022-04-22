@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Downloader - [Inserte Titulo Aqui]</title>
+    <meta name="description" content="Descarga videos en distintas calidades solo introduciendo el link.">
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="icon" type="image/png" href="../img/logo/logox512.png"/>
+  </head>
+  <body>
+    <div class="container2">
+      <div class="main">
+        <a href="/" id="btn-buscar" class="btn w-100 btn-rojo">
+          Volver
+        </a>
+        <img class="imgVideo" src="<%= videoData.urlImg %>" alt="">
+        <h1 class="title-logo">
+          <%= videoData.title %>
+        </h1>
+        <div>
+          <table class="tableFormats">
+            <tr>
+              <th>Formato</th>
+              <th>Calidad</th>
+              <th>Fps</th>
+              <th>Tamaño</th>
+              <th>Acciones</th>
+            </tr>
+            <% videoData.formats.forEach(function(format){ %>
+              <tr>
+                <td><%= format.mimeType.split(";")[0] %></td>
+                <td><%= format.qualityLabel %></td>
+                <td><%= format.fps %></td>
+                <td><%= Math.trunc(format.contentLength * 0.0000010) + " MB" %></td>
+                <td>
+                  <a href="<%= format.url %>" target="blank">Descargar</a>
+                </td>
+              </tr>
+            <% }); %>            
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

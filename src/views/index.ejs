@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Downloader - xDownload</title>
+    <meta name="description" content="Descarga videos en distintas calidades solo introduciendo el link.">
+    <%- include('partials/head.ejs'); -%>
+    <link rel="icon" type="image/png" href="img/logo/logox512.png"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <h1 class="title-logo">
+          <div>
+            <div class="logo">
+              <div class="youtube">
+                <span class="arrow"></span>
+              </div>
+            </div>
+          </div>
+          <div>Download</div> 
+        </h1>
+        <form action="" class="">
+          <div class="input-group">
+            <input id="url" type="url" name="url" placeholder="VIDEO URL" />
+          </div>
+          <div class="input-group">
+            <button id="btn-buscar" class="btn w-50 btn-verde">Buscar</button>
+            <button id="btn-limpiar" class="btn w-50 btn-rojo">Limpiar Campo</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
