@@ -18,9 +18,14 @@ i{
   padding-top: 2px;
 }
 
+html{
+  background-color: rgba(32,32,32,1);
+}
+
 body {
-  background: rgb(24,24,24);
+  background: rgba(32,32,32,1);
   background: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(32,32,32,1) 100%);
+  background-repeat: no-repeat;
   color: #e2e2e2;
   font-family: 'Roboto', sans-serif;
 }
@@ -45,7 +50,7 @@ input[type=url]:focus {
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   align-content: center;
@@ -55,6 +60,7 @@ input[type=url]:focus {
 
 .container2 {
   display: flex;
+  min-height: 100vh;
   justify-content: center;
 }
 
@@ -111,12 +117,34 @@ input[type=url]:focus {
   background-color: #c52f4d;
 }
 
+.btn-volver{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .w-50{
   width: 50%;
 }
 
 .w-100{
   width: 100%;
+}
+
+.mb-5{
+  margin-bottom: 5px;
+}
+
+.text-red{
+  color: #e63b5d;
+}
+
+.mb-10{
+  margin-bottom: 10px;
+}
+
+.mb-15{
+  margin-bottom: 15px;
 }
 
 .imgVideo{

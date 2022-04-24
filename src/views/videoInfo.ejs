@@ -8,18 +8,40 @@
     <meta name="description" content="Descarga videos en distintas calidades solo introduciendo el link.">
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="icon" type="image/png" href="../img/logo/logox512.png"/>
+    <script src="https://kit.fontawesome.com/d2cff73204.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container2">
       <div class="main">
-        <a href="/" id="btn-buscar" class="btn w-100 btn-rojo">
-          Volver
+        <a href="/" id="btn-buscar" class="btn w-100 btn-rojo btn-volver">
+          <i class="fas fa-chevron-left"></i><span>Volver</span>
         </a>
         <img class="imgVideo" src="<%= videoData.urlImg %>" alt="">
         <h1 class="title-logo">
           <%= videoData.title %>
         </h1>
         <div>
+          <table class="tableFormats mb-15">
+            <tr>
+              <th>Formato</th>
+              <th>Calidad</th>
+              <th>Fps</th>
+              <th>Tamaño</th>
+              <th>Acciones</th>
+            </tr>
+            <% videoData.filteredFormarts.forEach(function(format){ %>
+              <tr>
+                <td><%= format.mimeType.split(";")[0] %></td>
+                <td><%= format.qualityLabel %></td>
+                <td><%= format.fps %></td>
+                <td><%= format.contentLength?Math.trunc(format.contentLength * 0.0000010) + " MB":"Desconocido" %></td>
+                <td>
+                  <a href="/download?URL=<%= videoData.url %>&ITAG=<%= format.itag %>&EXT=<%= format.mimeType %>" target="blank">Descargar</a>
+                </td>
+              </tr>
+            <% }); %>            
+          </table>
+          <h2><i class="fas fa-volume-mute text-red"></i> Videos sin sonido</h2>
           <table class="tableFormats">
             <tr>
               <th>Formato</th>
@@ -28,14 +50,14 @@
               <th>Tamaño</th>
               <th>Acciones</th>
             </tr>
-            <% videoData.formats.forEach(function(format){ %>
+            <% videoData.mutedFormats.forEach(function(format){ %>
               <tr>
                 <td><%= format.mimeType.split(";")[0] %></td>
                 <td><%= format.qualityLabel %></td>
                 <td><%= format.fps %></td>
                 <td><%= Math.trunc(format.contentLength * 0.0000010) + " MB" %></td>
                 <td>
-                  <a href="<%= format.url %>" target="blank">Descargar</a>
+                  <a href="/download?URL=<%= videoData.url %>&ITAG=<%= format.itag %>&EXT=<%= format.mimeType %>" target="blank">Descargar</a>
                 </td>
               </tr>
             <% }); %>            
