@@ -12,6 +12,7 @@
     <meta name="robots" content="nofollow"/>
     <%- include('partials/head.ejs'); -%>
     <link rel="icon" type="image/png" href="img/logo/logox512.png"/>
+    <script src="https://kit.fontawesome.com/d2cff73204.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
@@ -28,11 +29,11 @@
         </h1>
         <form action="" class="">
           <div class="input-group">
-            <input id="url" type="url" name="url" placeholder="VIDEO URL" />
+            <input id="url" type="url" name="url" placeholder="VIDEO URL" autocomplete="off"/>
           </div>
           <div class="input-group">
-            <button id="btn-buscar" class="btn w-50 btn-verde">Buscar</button>
-            <button id="btn-limpiar" class="btn w-50 btn-rojo">Limpiar Campo</button>
+            <button id="btn-buscar" class="btn w-50 btn-verde btn-icon"><i class="fas fa-search"></i>Buscar</button>
+            <button id="btn-limpiar" class="btn w-50 btn-rojo btn-icon"><i class="fas fa-eraser"></i>Limpiar Campo</button>
           </div>
         </form>
       </div>

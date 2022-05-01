@@ -9,32 +9,32 @@
   --width: 80px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-i{
+i {
   box-sizing: border-box;
   padding-top: 2px;
 }
 
-html{
-  background-color: rgba(32,32,32,1);
+html {
+  background-color: rgba(32, 32, 32, 1);
 }
 
 body {
-  background: rgba(32,32,32,1);
-  background: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(32,32,32,1) 100%);
+  background: rgba(32, 32, 32, 1);
+  background: linear-gradient(0deg, rgba(24, 24, 24, 1) 0%, rgba(32, 32, 32, 1) 100%);
   background-repeat: no-repeat;
   color: #e2e2e2;
   font-family: 'Roboto', sans-serif;
 }
 
-h1{
+h1 {
   text-align: center;
 }
 
-input[type=url] {
+input[type='url'] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -45,7 +45,7 @@ input[type=url] {
   font-size: 20px;
   color: #2d2d2d;
 }
-input[type=url]:focus {
+input[type='url']:focus {
   outline: none;
 }
 
@@ -64,12 +64,12 @@ input[type=url]:focus {
   justify-content: center;
 }
 
-.main{
+.main {
   width: 560px;
   padding: 10px;
 }
 
-.title-logo{
+.title-logo {
   margin-bottom: 15px;
   font-weight: 300;
   display: flex;
@@ -79,13 +79,13 @@ input[type=url]:focus {
   gap: 20px;
 }
 
-.input-group{
+.input-group {
   width: 100%;
   display: flex;
   gap: 10px;
 }
 
-.btn{
+.btn {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -97,82 +97,91 @@ input[type=url]:focus {
   cursor: pointer;
 }
 
-.btn-verde{
+.btn-verde {
   background-color: #39ac78;
   color: #fff;
   border: none;
 }
 
-.btn-verde:hover{
+.btn-verde:hover {
   background-color: #268a5d;
 }
 
-.btn-rojo{
+.btn-rojo {
   background-color: #e63b5d;
   color: #fff;
   border: none;
 }
 
-.btn-rojo:hover{
+.btn-rojo:hover {
   background-color: #c52f4d;
 }
 
-.btn-volver{
+.btn-volver {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.w-50{
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.w-50 {
   width: 50%;
 }
 
-.w-100{
+.w-100 {
   width: 100%;
 }
 
-.mb-5{
+.mb-5 {
   margin-bottom: 5px;
 }
 
-.text-red{
+.text-red {
   color: #e63b5d;
 }
 
-.mb-10{
+.mb-10 {
   margin-bottom: 10px;
 }
 
-.mb-15{
+.mb-15 {
   margin-bottom: 15px;
 }
 
-.imgVideo{
+.imgVideo {
   width: 100%;
   height: auto;
   box-sizing: border-box !important;
 }
 
-.tableFormats{
+.tableFormats {
   width: 100%;
   text-align: center;
 }
 
-.tableFormats a{
+.tableFormats a {
   text-decoration: none;
   color: #1a794e;
   font-weight: bold;
 }
 
-.tableFormats a:hover{
+.tableFormats a:hover {
   color: #32a571;
 }
 
-.tableFormats th{
+.tableFormats th {
   font-size: 1.1rem;
 }
 
-.tableFormats td, .tableFormats th{
+.tableFormats td,
+.tableFormats th {
   padding: 5px 0px;
   border: solid 1px #3d3d3d;
   border-collapse: collapse;
@@ -180,44 +189,44 @@ input[type=url]:focus {
 
 .youtube {
   width: var(--width);
-  height: var(--height); 
+  height: var(--height);
   position: relative;
   padding: 0 15px;
-  background: #FF0000;
+  background: #ff0000;
   color: #fff;
   border-radius: 50% / 11%;
 }
 .youtube::before {
-content: "";
-line-height: 172px;
-position: absolute;
-top: 10%;
-bottom: 10%;
-right: -5%;
-left: -4.5%;
-background: inherit;
-border-radius: 5% / 50%;
+  content: '';
+  line-height: 172px;
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: -5%;
+  left: -4.5%;
+  background: inherit;
+  border-radius: 5% / 50%;
 }
 .arrow {
-width: 100%;
-height: var(--height); 
-display: flex;
-align-items: center;
-justify-content: center;
+  width: 100%;
+  height: var(--height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .arrow::before {
-content: "";
-width: 0;
-height: 0;
-border-top: 15px solid transparent;
-border-bottom: 15px solid transparent;
-border-left: 20px solid #fff;
-z-index: 9;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 20px solid #fff;
+  z-index: 9;
 }
 
 /*<600px*/
 @media screen and (max-width: 600px) {
-  .main{
+  .main {
     width: 100%;
   }
 }
